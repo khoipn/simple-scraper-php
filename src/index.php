@@ -8,6 +8,11 @@ require_once  __DIR__ . '/utils/scraping.php';
 
 use voku\helper\HtmlDomParser;
 
+$dom = HtmlDomParser::file_get_html("https://dantri.com.vn/");
+var_dump( $dom->plaintext );
+
+
+/*
 // initializing the cURL request
 $curl = curl_init();
 // setting the URL to reach with a GET HTTP request
@@ -55,3 +60,4 @@ for ($paginationNumber = 1; $paginationNumber <= $highestPaginationNumber; $pagi
 echo json_encode($productDataList);
 
 // writing the data scraped to a database/file
+*/
